@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homePageRowModel" type="com.elibrarysapplication.app.modules.homepage.data.model.HomePageRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumndiploma"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylebluegray_900cornerRadius">
+        <TextView android:ellipsize="end" android:id="@+id/txtDiploma"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_5pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{homePageRowModel.txtDiploma}"
+            style="@style/txtSansSerifCollection13" tools:text="@string/lbl_diploma"/>
+        <FrameLayout android:id="@+id/frameStackrectanglefive"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_25pxv"
+            android:layout_marginBottom="@dimen/_7pxv"
+            android:layout_marginEnd="@dimen/_9pxh"
+            android:layout_marginStart="@dimen/_7pxh"
+            android:layout_marginTop="@dimen/_1pxv" android:layout_width="@dimen/_116pxh">
+            <View
+                android:background="@drawable/rectangle_bg_bluegray_901_radius_5"
+                android:id="@+id/viewRectangleFive"
+                android:layout_gravity="bottom|start"
+                android:layout_height="@dimen/_22pxv"
+                android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_116pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSeeBooks"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1pxv"
+                android:layout_marginEnd="@dimen/_33pxh"
+                android:layout_marginStart="@dimen/_34pxh"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{homePageRowModel.txtSeeBooks}"
+                style="@style/txtSansSerifCollection10" tools:text="@string/lbl_see_books"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

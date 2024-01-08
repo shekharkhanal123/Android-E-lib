@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homePageVM" type="com.elibrarysapplication.app.modules.homepage.data.viewmodel.HomePageVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameHomepage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylegray_901">
+
+        <LinearLayout
+            android:id="@+id/linearColumnlightlogoone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|start"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/frameStackrectangleten"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60pxv"
+                android:gravity="start">
+
+                <View
+                    android:id="@+id/viewRectangleTwelve"
+                    android:layout_width="@dimen/_360pxh"
+                    android:layout_height="@dimen/_60pxv"
+                    android:layout_gravity="start"
+                    android:background="@drawable/rectangle_bg_gray_900_border_bluegray_800" />
+
+                <LinearLayout
+                    android:id="@+id/linearRowrectangleten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/_15pxh"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:layout_marginEnd="@dimen/_15pxh"
+                    android:layout_marginBottom="@dimen/_11pxv"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linearColumnrectangleten"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_marginBottom="@dimen/_11pxv"
+                        android:layout_weight="0.4"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/viewRectangleTen"
+                            android:layout_width="@dimen/_23pxh"
+                            android:layout_height="@dimen/_2pxv"
+                            android:background="@drawable/rectangle_bg_bluegray_100_radius_1" />
+
+                        <View
+                            android:id="@+id/viewRectangleNine"
+                            android:layout_width="@dimen/_23pxh"
+                            android:layout_height="@dimen/_2pxv"
+                            android:layout_marginTop="@dimen/_5pxv"
+                            android:background="@drawable/rectangle_bg_bluegray_100_radius_1" />
+
+                        <View
+                            android:id="@+id/viewRectangleEight"
+                            android:layout_width="@dimen/_23pxh"
+                            android:layout_height="@dimen/_2pxv"
+                            android:layout_marginTop="@dimen/_5pxv"
+                            android:background="@drawable/rectangle_bg_bluegray_100_radius_1" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageLightlogoOne"
+                        android:layout_width="@dimen/_35pxh"
+                        android:layout_height="@dimen/_37pxh"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_lightlogo1"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_lightlogo1" />
+                </LinearLayout>
+
+
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/etGroupTwentyEight"
+                style="@style/et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:ellipsize="end"
+                android:hint="@string/msg_books_we_provid"
+                android:inputType="text"
+                android:paddingStart="@dimen/_4pxh"
+                android:paddingBottom="@dimen/_12pxv"
+                android:singleLine="true"
+                android:text="@={homePageVM.homePageModel.etGroupTwentyEightValue}"
+                android:textColorHint="@color/white_A700"
+                tools:ignore="Autofill" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerHomePage"
+                itemSpace="@{@dimen/_44pxh}"
+                android:layout_width="match_parent"
+                android:layout_height="274dp"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_38pxv"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:gravity="center_horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="3"
+                tools:listitem="@layout/row_home_page" />
+
+        </LinearLayout>
+    </FrameLayout>
+</layout>

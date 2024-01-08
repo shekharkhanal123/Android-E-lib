@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">e_library_s_application2</string>
+    <string name="loading">Loading…</string>
+    <string name="no_internet_connection">No internet connection!</string>
+<string name="lbl_email">Email</string>
+  <string name="msg_agree_to_term">Agree to Term &amp; Condition</string>
+  <string name="lbl_e_library">E-Library</string>
+  <string name="lbl_2_management">+2 Management</string>
+  <string name="lbl_next">Next</string>
+  <string name="msg_forget_password">Forget Password ?</string>
+  <string name="lbl_user_name">User Name</string>
+  <string name="msg_don_t_have_acco">Don\u2019t have account? </string>
+  <string name="msg_confirm_passwor">Confirm Password</string>
+  <string name="lbl_2_science">+2 Science</string>
+  <string name="lbl_password">Password</string>
+  <string name="lbl_phone">Phone</string>
+  <string name="msg_read_reserve">Read! Reserve! Repeat!</string>
+  <string name="msg_books_we_provid">Books We Provide</string>
+  <string name="lbl_signup">Signup</string>
+  <string name="lbl_login">Login</string>
+  <string name="lbl_address">Address</string>
+  <string name="lbl_show_password">Show password</string>
+  <string name="lbl_see_books">See Books</string>
+  <string name="msg_already_have_ac">Already have account? </string>
+  <string name="lbl_new_password">New Password</string>
+  <string name="lbl_diploma">Diploma</string>
+  <string name="lbl_view_as_guest">View as Guest</string>
+</resources>

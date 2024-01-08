@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signup2PageVM" type="com.elibrarysapplication.app.modules.signup2page.data.viewmodel.Signup2PageVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStack"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <FrameLayout android:id="@+id/frameSignup2page"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+            <FrameLayout android:id="@+id/frameStackimg0qq31fxpxone"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_640pxv"
+                android:layout_marginBottom="@dimen/_3pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageImg0qq31fxpxOne"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_img0qq31fxpx1_2}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_img0qq31fxpx1_2"/>
+                <FrameLayout android:id="@+id/frameStackscreenshot2023"
+                    android:layout_gravity="top|start"
+                    android:layout_height="@dimen/_60pxv"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_width="match_parent" style="@style/groupStylegray_900">
+                    <ImageView android:id="@+id/imageScreenshot2023"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_marginHorizontal="@dimen/_15pxh"
+                        android:layout_marginVertical="@dimen/_15pxv"
+                        android:layout_width="@dimen/_74pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_screenshot2023"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot2023"/>
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameStackemail"
+                android:layout_gravity="bottom|start"
+                android:layout_height="@dimen/_583pxv"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="match_parent" style="@style/groupStylegray_900_a2">
+                <LinearLayout android:id="@+id/linearColumnemail"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_40pxh"
+                    android:layout_marginVertical="@dimen/_40pxv"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical" style="@style/groupStyleblack_900_b2cornerRadius">
+                    <TextView android:id="@+id/txtEmail"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_15pxh"
+                        android:layout_marginStart="@dimen/_15pxh"
+                        android:layout_marginTop="@dimen/_54pxv"
+                        android:layout_width="wrap_content"
+                        android:text="@{signup2PageVM.signup2PageModel.txtEmail}"
+                        style="@style/txtSansSerifCollection10" tools:text="@string/lbl_email"/>
+                    <View android:background="@color/white_A700"
+                        android:id="@+id/lineLineSix"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_2pxv"
+                        android:layout_marginEnd="@dimen/_15pxh"
+                        android:layout_marginStart="@dimen/_15pxh"
+                        android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_180pxh"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnnewpassword"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_15pxv"
+                        android:layout_marginEnd="@dimen/_12pxh"
+                        android:layout_marginStart="@dimen/_15pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtNewPassword"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginStart="@dimen/_1pxh"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{signup2PageVM.signup2PageModel.txtNewPassword}"
+                            style="@style/txtSansSerifCollection10" tools:text="@string/lbl_new_password"/>
+                        <View android:background="@color/white_A700"
+                            android:id="@+id/lineLineSeven"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_2pxv"
+                            android:layout_marginEnd="@dimen/_5pxh"
+                            android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_180pxh"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtConfirmPasswor"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_8pxv"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{signup2PageVM.signup2PageModel.txtConfirmPasswor}"
+                            style="@style/txtSansSerifCollection10" tools:text="@string/msg_confirm_passwor"/>
+                        <View android:background="@color/white_A700"
+                            android:id="@+id/lineLineEight"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_2pxv"
+                            android:layout_marginEnd="@dimen/_4pxh"
+                            android:layout_marginStart="@dimen/_1pxh"
+                            android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_180pxh"/>
+                        <LinearLayout
+                            android:id="@+id/linearRowrectangletwenty"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_1pxh"
+                            android:layout_marginTop="@dimen/_13pxv"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <View
+                                android:background="@drawable/rectangle_bg_bluegray_100_radius_1"
+                                android:id="@+id/viewRectangleTwenty"
+                                android:layout_height="@dimen/_7pxh"
+                                android:layout_marginBottom="@dimen/_8pxv"
+                                android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_6pxh"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtAgreetoTerm"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_1pxv"
+                                android:layout_marginStart="@dimen/_2pxh"
+                                android:layout_marginTop="@dimen/_2pxv"
+                                android:layout_weight="0.55"
+                                android:layout_width="0dp"
+                                android:singleLine="true"
+                                android:text="@{signup2PageVM.signup2PageModel.txtAgreetoTerm}"
+                                style="@style/txtSansSerifCollection7" tools:text="@string/msg_agree_to_term"/>
+                            <View
+                                android:background="@drawable/rectangle_bg_bluegray_100_radius_1"
+                                android:id="@+id/viewRectangleNineteen"
+                                android:layout_height="@dimen/_7pxh"
+                                android:layout_marginBottom="@dimen/_8pxv"
+                                android:layout_marginStart="@dimen/_7pxh"
+                                android:layout_marginTop="@dimen/_7pxv" android:layout_width="@dimen/_6pxh"/>
+                            <TextView android:id="@+id/txtShowpassword"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_3pxh"
+                                android:layout_weight="0.38"
+                                android:layout_width="0dp"
+                                android:text="@{signup2PageVM.signup2PageModel.txtShowpassword}"
+                                style="@style/txtSansSerifCollection9" tools:text="@string/lbl_show_password"/>
+                        </LinearLayout>
+                        <FrameLayout
+                            android:id="@+id/frameStackrectangleeighteen"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_32pxv"
+                            android:layout_marginEnd="@dimen/_4pxh"
+                            android:layout_marginStart="@dimen/_1pxh"
+                            android:layout_marginTop="@dimen/_4pxv" android:layout_width="@dimen/_180pxh">
+                            <View
+                                android:background="@drawable/rectangle_bg_indigo_300_radius_10"
+                                android:id="@+id/viewRectangleEighteen"
+                                android:layout_gravity="start"
+                                android:layout_height="@dimen/_32pxv"
+                                android:layout_marginBottom="@dimen/_1pxv" android:layout_width="@dimen/_180pxh"/>
+                            <TextView android:id="@+id/txtSignup"
+                                android:layout_gravity="bottom|center"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_70pxh"
+                                android:layout_marginStart="@dimen/_70pxh"
+                                android:layout_marginTop="@dimen/_10pxv"
+                                android:layout_width="wrap_content"
+                                android:text="@{signup2PageVM.signup2PageModel.txtSignup}"
+                                style="@style/txtSansSerifCollection12" tools:text="@string/lbl_signup"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/txtSignupOne"
+                    android:layout_gravity="top|center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_157pxv"
+                    android:layout_marginEnd="@dimen/_145pxh"
+                    android:layout_marginStart="@dimen/_145pxh"
+                    android:layout_marginTop="@dimen/_157pxv"
+                    android:layout_width="wrap_content"
+                    android:text="@{signup2PageVM.signup2PageModel.txtSignupOne}"
+                    style="@style/txtSansSerifCollection20" tools:text="@string/lbl_signup"/>
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>

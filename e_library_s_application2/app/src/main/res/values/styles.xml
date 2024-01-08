@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="txtSolidRoundedOutline">
+        <item name="android:textSize">@dimen/_15pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_bg_black_900_b2_border_white_a700_radius_5</item>
+    </style>
+    <style name="groupStylebluegray_1">
+        <item name="android:background">@drawable/rectangle_bg_bluegray_900_border_bluegray_901_radius_10</item>
+    </style>
+    <style name="groupStylegray_900">
+        <item name="android:background">@drawable/rectangle_bg_gray_900_border_bluegray_800</item>
+    </style>
+    <style name="txtSansSerifCollection10_2">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/indigo_300</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtSansSerifCollection10_1">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/indigo_400</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStylebluegray_900cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_bluegray_900_border_bluegray_901_radius_10</item>
+    </style>
+    <style name="groupStylegray_900_a2">
+        <item name="android:background">@drawable/rectangle_bg_gray_900_a2_border_gray_900_a2</item>
+    </style>
+    <style name="txtSansSerifCollection8">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtSansSerifCollection9">
+        <item name="android:textSize">@dimen/_9pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="et">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="txtSansSerifCollection20">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtSansSerifCollection10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txt">
+        <item name="android:textSize">@dimen/_40pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="txtSansSerifCollection7">
+        <item name="android:textSize">@dimen/_7pxh</item>
+        <item name="android:textColor">@color/indigo_400</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStyleblack_900_b2cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_black_900_b2_radius_20</item>
+    </style>
+    <style name="txt_1">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="groupStyleindigo_300cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_indigo_300_radius_10</item>
+    </style>
+    <style name="txtSansSerifCollection13">
+        <item name="android:textSize">@dimen/_13pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtArimoHebrewSubsetItalicarimohebrewsubsetitalicitalic15">
+        <item name="android:textSize">@dimen/_15pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/arimo_hebrew_subset_italic</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStylewhite_A700">
+        <item name="android:background">@drawable/rectangle_bg_white_a700</item>
+    </style>
+    <style name="groupStylegray_901">
+        <item name="android:background">@drawable/rectangle_bg_gray_901</item>
+    </style>
+    <style name="txtSansSerifCollection12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/white_A700</item>
+        <item name="android:fontFamily">@font/sans_serif_collection</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+</resources>

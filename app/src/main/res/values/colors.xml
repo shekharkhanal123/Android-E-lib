@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="def">#5A5A5A</color>
+    <color name="bgcolor">#0E1525</color>
+    <color name="navbody">#101625</color>
+    <color name="navborder">#3c445c</color>
+    <color name="darkbtncolor">#70000000</color>
+    <color name="btncolor">#378ED1</color>
+    <color name="boxbtnclr">#2b3245</color>
+    <color name="boxbg">#1c2333</color>
+    <color name="boxbd">#2b3245</color>
+    <color name="black">#FF000000</color>
+    <color name="formtxt">#C3C3C3</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="trans">#00FFFFFF</color>
+    <color name="gray">#A3A3A3</color>
+</resources>

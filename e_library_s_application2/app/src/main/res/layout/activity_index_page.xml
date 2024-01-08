@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="indexPageVM" type="com.elibrarysapplication.app.modules.indexpage.data.viewmodel.IndexPageVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameIndexpage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+
+        <ImageView
+            android:id="@+id/imageImg0qq31fxpxOne"
+            imageRes="@{@drawable/img_img0qq31fxpx1_640x360}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_img0qq31fxpx1_640x360" />
+        <FrameLayout android:id="@+id/frameStackelibrary"
+            android:layout_gravity="start"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearColumnelibrary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtELibrary"
+                    style="@style/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="@dimen/_79pxv"
+                    android:layout_marginEnd="@dimen/_36pxh"
+                    android:gravity="center_horizontal"
+                    android:text="@{indexPageVM.indexPageModel.txtELibrary}"
+                    tools:text="@string/lbl_e_library" />
+
+                <TextView
+                    android:id="@+id/txtReadReserve"
+                    style="@style/txtArimoHebrewSubsetItalicarimohebrewsubsetitalicitalic15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginEnd="@dimen/_36pxh"
+                    android:text="@{indexPageVM.indexPageModel.txtReadReserve}"
+                    tools:text="@string/msg_read_reserve" />
+
+                <LinearLayout
+                    android:id="@+id/linearRowgrouptwenty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="@dimen/_166pxv"
+                    android:layout_marginEnd="@dimen/_36pxh"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtGroupTwenty"
+                        style="@style/txtSolidRoundedOutline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:ellipsize="end"
+                        android:paddingStart="@dimen/_28pxh"
+                        android:paddingTop="@dimen/_3pxv"
+                        android:paddingEnd="@dimen/_29pxh"
+                        android:paddingBottom="@dimen/_1pxv"
+                        android:singleLine="true"
+                        android:text="@{indexPageVM.indexPageModel.txtGroupTwenty}"
+                        tools:text="@string/lbl_login" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtGroupNineteen"
+                    style="@style/txtSolidRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="@dimen/_13pxv"
+                    android:layout_marginEnd="@dimen/_36pxh"
+                    android:layout_marginBottom="@dimen/_121pxv"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_2pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@{indexPageVM.indexPageModel.txtGroupNineteen}"
+                    tools:text="@string/lbl_view_as_guest" />
+
+                <TextView
+                    android:id="@+id/txtGroupEighteen"
+                    style="@style/txtSolidRoundedOutline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_13pxh"
+                    android:layout_weight="0.5"
+                    android:ellipsize="end"
+                    android:paddingStart="@dimen/_27pxh"
+                    android:paddingTop="@dimen/_3pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@{indexPageVM.indexPageModel.txtGroupEighteen}"
+                    tools:text="@string/lbl_signup" />
+            </LinearLayout>
+
+            <FrameLayout android:id="@+id/frameStackscreenshot2023"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_60pxv"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_width="match_parent" style="@style/groupStylegray_900">
+                <ImageView android:id="@+id/imageScreenshot2023"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_marginHorizontal="@dimen/_15pxh"
+                    android:layout_marginVertical="@dimen/_15pxv"
+                    android:layout_width="@dimen/_74pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_screenshot2023"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_screenshot2023"/>
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>
