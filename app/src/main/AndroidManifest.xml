@@ -16,11 +16,17 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".science"
+            android:exported="false" />
+        <activity
+            android:name=".management"
+            android:exported="false" />
+        <activity
             android:name=".diploma"
             android:exported="false" />
         <activity
             android:name=".OTP"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".Signin"
             android:exported="false" />

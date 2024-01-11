@@ -21,15 +21,15 @@ tools:context=".homepage">
 
                 <ViewFlipper
                     android:layout_width="30dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="35dp"
                     android:background="@drawable/baseline_menu_24" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="10dp"
-                    app:srcCompat="@mipmap/lightlogo" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageView2"-->
+<!--                    android:layout_width="45dp"-->
+<!--                    android:layout_height="45dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    app:srcCompat="@mipmap/lightlogo" />-->
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
@@ -41,14 +41,122 @@ tools:context=".homepage">
             android:orientation="vertical"
             tools:ignore="MissingConstraints">
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainerView"
-                android:name="com.elib.HomeFragment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="124dp"
-                tools:layout_editor_absoluteY="308dp"
-                tools:layout="@layout/fragment_home" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/heading1"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:columnCount="2"
+                        android:useDefaultMargins="true">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/box"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="@string/Diploma"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <Button
+                                android:id="@+id/dipbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:backgroundTint="@color/boxbtnclr"
+                                android:text="@string/seebooks"
+                                android:textColor="@color/white"
+                                app:cornerRadius="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/box"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="@string/science"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <Button
+                                android:id="@+id/scibtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:backgroundTint="@color/boxbtnclr"
+                                android:text="@string/seebooks"
+                                android:textColor="@color/white"
+                                app:cornerRadius="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/box"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="@string/Management"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <Button
+                                android:id="@+id/manbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="7dp"
+                                android:backgroundTint="@color/boxbtnclr"
+                                android:text="@string/seebooks"
+
+                                android:textColor="@color/white"
+                                app:cornerRadius="10dp" />
+                        </LinearLayout>
+
+                    </GridLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
 
         </LinearLayout>
 </LinearLayout>
