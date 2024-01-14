@@ -51,8 +51,8 @@
     <string name="heading1">Books We Provide</string>
 
     <!--Faculty-->
-    <string name="science">+2 Science</string>
-    <string name="Management">+2 Management</string>
+    <string name="science">Science</string>
+    <string name="Management">Management</string>
     <string name="Diploma">Diploma</string>
     <string name="_5dp">5dp</string>
     <string name="already_have_account">Already have account?</string>
@@ -85,4 +85,7 @@
     <string name="status">Status</string>
     <string name="select">Select</string>
     <string name="clas">Class</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="dashboard">Dashboard</string>
 </resources>

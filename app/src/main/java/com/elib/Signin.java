@@ -2,6 +2,7 @@ package com.elib;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
@@ -13,6 +14,7 @@ public class Signin extends AppCompatActivity {
 
 
     //      Variable Declaration
+    SharedPreferences sharedPreferences;
     EditText musername,maddress,mphone;
     Button nextbtn;
     TextView navlogbtn;

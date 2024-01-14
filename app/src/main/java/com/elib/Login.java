@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -28,6 +29,7 @@ import java.util.Map;
 
 
 public class Login extends AppCompatActivity {
+    SharedPreferences sharedPreferences;
 
     EditText memail, mpassword;
     Button loginbtn ;
@@ -45,6 +47,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        String username = getIntent().getStringExtra("keyname");
         //        getting data from login form
         memail = findViewById(R.id.inemail);
         mpassword = findViewById(R.id.inpassword);
@@ -53,9 +56,11 @@ public class Login extends AppCompatActivity {
         showpass = findViewById(R.id.showpass);
         progressDialog = new ProgressDialog(this);
 
+        sharedPreferences= getSharedPreferences("user_info",MODE_PRIVATE);
+
         //        Navigation
         Intent navsign = new Intent(Login.this, Signin.class);
-        Intent homepage = new Intent(Login.this, homepage.class);
+        Intent homepage = new Intent(Login.this, Home.class);
 
 
         //        On click EvenHandler
@@ -86,7 +91,13 @@ public class Login extends AppCompatActivity {
                             try {
                                 if (response.equals("Success")){
                                     Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
+
+                                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                                    editor.putString("username",username);
+                                    editor.putString("email",email);
+                                    editor.apply();
                                     startActivity(homepage);
+
                                 } else if(response.equals("wrgpass")) {
                                     mpassword.setError("Wrong password");
                                     Toast.makeText(getApplicationContext(),"Wrong Password!",Toast.LENGTH_LONG).show();

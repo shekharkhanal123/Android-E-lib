@@ -3,10 +3,12 @@ package com.elib;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Button Signin = findViewById(R.id.signup);
 
 
-        Intent iNext = new Intent(MainActivity.this, homepage.class);
+        Intent iNext = new Intent(MainActivity.this, Home.class);
         Intent ilog = new Intent(MainActivity.this, Login.class);
         Intent isign = new Intent(MainActivity.this, Signin.class);
 

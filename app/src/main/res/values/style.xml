@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="darkbutton">
+    <style name="apptheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:background">@drawable/darkbutton</item>
+        <item name="android:statusBarColor">#00000000</item>
     </style>
 </resources>

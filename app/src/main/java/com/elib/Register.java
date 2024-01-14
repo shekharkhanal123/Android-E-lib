@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.SyncStateContract;
 import android.text.InputType;
@@ -35,7 +36,7 @@ import java.util.jar.JarException;
 
 
 public class Register extends AppCompatActivity {
-
+    SharedPreferences sharedPreferences;
     private boolean passwordshow = false;
     EditText memail, mcrpass, mcpass;
     Button registerbtn;
@@ -59,6 +60,8 @@ public class Register extends AppCompatActivity {
         registerbtn = findViewById(R.id.signubtn);
         showpass = findViewById(R.id.showpass);
         progressDialog = new ProgressDialog(this);
+        sharedPreferences= getSharedPreferences("user_info",MODE_PRIVATE);
+
 
         //        Navigation
         Intent Login =new Intent(Register.this , Login.class);
@@ -90,10 +93,16 @@ public class Register extends AppCompatActivity {
             String crpass = mcrpass.getText().toString().trim();
             String cpass = mcpass.getText().toString().trim();
             OTP.putExtra("keyname",username);
+            Login.putExtra("keyname",username);
             OTP.putExtra("keyphone",phone);
             OTP.putExtra("keyadd",address);
             OTP.putExtra("keyemail",email);
             OTP.putExtra("keyadd",cpass);
+
+            SharedPreferences.Editor editor=sharedPreferences.edit();
+            editor.putString("username",username);
+            editor.putString("email",email);
+            editor.commit();
 
             if(!email.equals("")&&!crpass.equals("")&&!cpass.equals(""))
             {
