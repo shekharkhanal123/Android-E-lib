@@ -85,4 +85,7 @@
     <string name="status">Status</string>
     <string name="select">Select</string>
     <string name="clas">Class</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="dashboard">Dashboard</string>
 </resources>
