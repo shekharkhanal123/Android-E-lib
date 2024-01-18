@@ -15,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(SharedPrefManager.getInstance(this).isLoogedin()){
+            finish();
+            startActivity(new Intent(this, Home.class));
+            return;
+        }
+
 
         Button VAG = findViewById(R.id.VAG);
         Button Login = findViewById(R.id.login);

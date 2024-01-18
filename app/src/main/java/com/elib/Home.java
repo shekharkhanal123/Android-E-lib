@@ -13,18 +13,25 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationBarItemView;
 import com.google.android.material.navigation.NavigationView;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     SharedPreferences sharedPreferences;
     private DrawerLayout drawerLayout;
-    TextView name,email;
+    private TextView name,email;
+    NavigationBarItemView login;
+
     Toolbar tool;
     NavigationView navigationView;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +41,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         tool = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-        name = findViewById(R.id.name);
-        email = findViewById(R.id.email);
-        sharedPreferences=getSharedPreferences("user_info",MODE_PRIVATE);
 
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -50,10 +54,17 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout,new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
+
+        name = navigationView.getHeaderView(0).findViewById(R.id.name);
+        email = navigationView.getHeaderView(0).findViewById(R.id.email);
+        Log.i("access","name");
+        name.setText(SharedPrefManager.getInstance(this).getUsername());
+        email.setText(SharedPrefManager.getInstance(this).getEmail());
+
+
+
     }
 
-
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuitem) {
 
@@ -66,11 +77,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         else if(menuitem.getItemId()==R.id.nav_about){
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout,new AboutFragment()).commit();
         }
-        else if (menuitem.getItemId()==R.id.nav_logout){
-            SharedPreferences.Editor editor=sharedPreferences.edit();
-            editor.clear();
-            editor.apply();
-            logout(Home.this);
+        else if (menuitem.getItemId()==R.id.nav_log){
+            SharedPrefManager.getInstance(this).logout();
+            startActivity(new Intent(this, MainActivity.class));
+            finish();
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
