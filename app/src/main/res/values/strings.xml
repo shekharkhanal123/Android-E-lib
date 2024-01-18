@@ -88,4 +88,10 @@
     <string name="profile">Profile</string>
     <string name="logout">Logout</string>
     <string name="dashboard">Dashboard</string>
+    <string name="useremail_gmail_com">useremail@gmail.com</string>
+    <string name="user_name">User Name</string>
+    <string name="reserve">Reserve</string>
+    <string name="borrowed_books">Borrowed Books</string>
+    <string name="history">History</string>
+    <string name="returned_books">Returned Books</string>
 </resources>

@@ -34,7 +34,7 @@ public class OTP extends AppCompatActivity {
     ProgressDialog progressDialog;
 
     private boolean resendenable= false;
-    private int resetTime= 60;
+    private final int resetTime= 60;
 
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})

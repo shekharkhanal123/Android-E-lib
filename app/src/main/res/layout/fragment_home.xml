@@ -69,7 +69,9 @@
                             android:backgroundTint="@color/boxbtnclr"
                             android:text="@string/seebooks"
                             android:textColor="@color/white"
-                            app:cornerRadius="10dp" />
+                            app:cornerRadius="10dp"
+                            app:strokeColor="@color/navborder"
+                            app:strokeWidth="1dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -95,7 +97,9 @@
                             android:backgroundTint="@color/boxbtnclr"
                             android:text="@string/seebooks"
                             android:textColor="@color/white"
-                            app:cornerRadius="10dp" />
+                            app:cornerRadius="10dp"
+                            app:strokeColor="@color/navborder"
+                            app:strokeWidth="1dp"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -120,9 +124,10 @@
                             android:layout_marginHorizontal="7dp"
                             android:backgroundTint="@color/boxbtnclr"
                             android:text="@string/seebooks"
-
                             android:textColor="@color/white"
-                            app:cornerRadius="10dp" />
+                            app:cornerRadius="10dp"
+                            app:strokeColor="@color/navborder"
+                            app:strokeWidth="1dp"/>
                     </LinearLayout>
 
                 </GridLayout>

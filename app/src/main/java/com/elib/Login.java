@@ -40,12 +40,28 @@ public class Login extends AppCompatActivity {
     private  boolean passwordshow = false;
     TextView navsignbtn;
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if(SharedPrefManager.getInstance(this).isLoogedin()){
+            startActivity(new Intent(this, Home.class));
+            return;
+        }
+
+    }
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        if(SharedPrefManager.getInstance(this).isLoogedin()){
+            startActivity(new Intent(this, Home.class));
+            return;
+        }
+
 
         String username = getIntent().getStringExtra("keyname");
         //        getting data from login form
@@ -89,22 +105,24 @@ public class Login extends AppCompatActivity {
                         public void onResponse(String response) {
                             progressDialog.dismiss();
                             try {
-                                if (response.equals("Success")){
-                                    Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
+                                JSONObject obj = new JSONObject(response);
+                                if(!obj.getBoolean("error")){
 
-                                    SharedPreferences.Editor editor=sharedPreferences.edit();
-                                    editor.putString("username",username);
-                                    editor.putString("email",email);
-                                    editor.apply();
+                                    Toast.makeText(getApplicationContext(),obj.getString("email"), Toast.LENGTH_LONG).show();
+
+                                    SharedPrefManager.getInstance(getApplicationContext()).userLogin(
+                                            obj.getString("username"),
+                                            obj.getString("email")
+                                    );
+                                    Toast.makeText(getApplicationContext(),"Login Successfully!",Toast.LENGTH_LONG).show();
                                     startActivity(homepage);
 
-                                } else if(response.equals("wrgpass")) {
+                                } else if(obj.getBoolean("error")) {
                                     mpassword.setError("Wrong password");
                                     Toast.makeText(getApplicationContext(),"Wrong Password!",Toast.LENGTH_LONG).show();
                                 }
                                 else{
-                                    JSONObject jsonObject = new JSONObject(response);
-                                    Toast.makeText(getApplicationContext(),jsonObject.getString("message"), Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),obj.getString("message"), Toast.LENGTH_LONG).show();
                                 }
                             }catch (Exception e){
                                 e.printStackTrace();
@@ -114,9 +132,8 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     progressDialog.hide();
-                    Toast.makeText(getApplicationContext(),"Internet Connection Error!",Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Internet Connection Error!"+error.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }){
                 @Override

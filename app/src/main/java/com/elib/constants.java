@@ -6,4 +6,5 @@ public class constants {
     public  static final String URL_VERIFY = ROOT_URL+"verify.php";
     public static final  String URL_REGISTER = ROOT_URL+"signup.php";
     public  static final String URL_LOGIN = ROOT_URL+"login.php";
+    public  static final String URL_FETCH = ROOT_URL+"fetch_data.php";
 }

@@ -13,7 +13,7 @@
         android:background="@drawable/nav_bar">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/backbtn"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="14dp"
@@ -40,7 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="20dp">
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical">
 
             <TableLayout
                 android:id="@+id/diploma_table"
@@ -53,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:background="@color/boxbd"
                     android:gravity="center"
-                    android:paddingVertical="5dp">
+                    android:paddingVertical="10dp">
 
                     <TextView
                         android:id="@+id/SEM"
@@ -102,10 +103,29 @@
 
                 </TableRow>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+
+
             </TableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:background="@drawable/table">
+
+                <TextView
+                    android:id="@+id/resbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="7dp"
+                    android:text="@string/reserve"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
 
         </LinearLayout>
 
